@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style_registro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Formulario de Registro</title>
+    
+</head>
+<body>
+    <h1> - REGISTRO -</h1>
+    <form id="registroForm">
+        <label for="nombres">Nombres y Apellidos:</label><br>
+        <input type="text" id="nombres" name="nombres"><br><br>
+
+        <label for="tipoDocumento">Tipo de Documento:</label><br>
+        <select id="tipoDocumento" name="tipoDocumento">
+            <option> -- seleccione una opcion --</option>
+            <option value="cc">Cédula de Ciudadanía (CC)</option>
+            <option value="ti">Tarjeta de Identidad (TI)</option>
+            <option value="ce">Cédula de Extranjería (CE)</option>
+        </select><br><br>
+
+        <label for="numeroDocumento">Número de Documento:</label><br>
+        <input type="text" id="numeroDocumento" name="numeroDocumento"><br><br>
+
+        <label for="celular">Celular:</label><br>
+        <input type="tel" id="celular" name="celular"><br><br>
+
+        <label for="sexo">Sexo:</label><br>
+        <select id="sexo" name="sexo">
+            <option> --Seleccione una opcion-- </option>
+            <option value="f">Femenino (F)</option>
+            <option value="m">Masculino (M)</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
+
+        <button type="button" onclick="validarFormulario()"> GUARDAR </button>
+    </form>
+
+    <script>
+        function validarFormulario() {
+            var nombres = document.getElementById("nombres").value;
+            var numeroDocumento = document.getElementById("numeroDocumento").value;
+            var celular = document.getElementById("celular").value;
+
+            if (nombres === "" || numeroDocumento === "" || celular === "") {
+                alert("Por favor, complete todos los campos.");
+            } else {
+                alert("Formulario enviado correctamente.");
+                // Aquí puedes agregar el código para enviar los datos a un servidor
+            }
+        }
+    </script>
+</body>
+</html>
