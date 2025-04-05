@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="crud-container">
+        <h1>CRUD Usuarios</h1>
+
+        <div id="create-user">
+            <h2>Crear Usuario</h2>
+            <input type="text" id="create-nombre" placeholder="Nombre">
+            <input type="text" id="create-apellido" placeholder="Apellido">
+            <input type="text" id="create-usuario" placeholder="Usuario">
+            <input type="password" id="create-password" placeholder="Contraseña">
+            <button id="create-button">Crear</button>
+        </div>
+
+        <div id="read-user">
+            <h2>Consultar Usuario por Identificación</h2>
+            <input type="text" id="read-id" placeholder="Identificación">
+            <button id="read-button">Consultar</button>
+            <div id="read-result"></div>
+        </div>
+
+        <div id="update-user">
+            <h2>Actualizar Usuario</h2>
+            <input type="text" id="update-id" placeholder="ID del Usuario">
+            <input type="text" id="update-nombre" placeholder="Nombre">
+            <input type="text" id="update-apellido" placeholder="Apellido">
+            <input type="text" id="update-usuario" placeholder="Usuario">
+            <input type="password" id="update-password" placeholder="Contraseña">
+            <button id="update-button">Actualizar</button>
+        </div>
+
+        <div id="delete-user">
+            <h2>Eliminar Usuario</h2>
+            <input type="text" id="delete-id" placeholder="ID del Usuario">
+            <button id="delete-button">Eliminar</button>
+        </div>
+
+        <div id="user-list">
+            <h2>Lista de Usuarios</h2>
+            <ul id="users"></ul>
+        </div>
+    </div>
+    <script src="crud.js"></script>
+</body>
+</html>
