@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style_index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Login - GRE</title>
+</head>
+<body>
+    <div id="Main">
+        <div id="left">
+            <h1>LOGIN</h1>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <p style="color:red;">{{ messages[0] }}</p>
+                {% endif %}
+            {% endwith %}
+
+            <form action="{{ url_for('login') }}" method="post">
+                <label for="user">Username:</label><br>
+                <input type="text" id="user" name="user" required><br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <button type="submit" id="enviar">ENVIAR</button>
+
+                <p>Si aún no tienes cuenta, puedes <a href="/registro.html">registrarte</a></p>
+            </form>
+        </div>
+
+        <div id="right">
+            <img src="/img/frame_edit3.jpeg" alt="GRE Logo" id="logo">
+        </div>
+    </div>
+</body>
+</html>
