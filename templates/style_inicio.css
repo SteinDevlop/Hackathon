@@ -1,0 +1,69 @@
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+label{
+    font-size: 20px;
+    color: black;
+}
+
+input {
+    border-radius: 5px;
+    padding: 2px;
+    border: 1px solid #000000;
+}
+
+#enviar {
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+a{
+    color: black;
+    text-decoration: underline
+}
+
+#Main{
+    display: flex;
+    flex-direction:row;
+}
+
+#left{
+    text-align: center;
+    margin-top: 12%;  
+    width: 30%;
+}
+
+#left h1{
+    margin-bottom: 10px;
+    color: black;
+    font-size: 60px;
+}
+
+#right {
+    width: 70%;
+    height: 100%;
+}
+
+#right img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#right h1{
+    margin: 30px;
+    text-align: center;
+
+}
